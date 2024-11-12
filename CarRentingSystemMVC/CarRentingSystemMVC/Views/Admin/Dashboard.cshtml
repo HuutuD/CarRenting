@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+
+<div class="container mt-5">
+    <h1 class="text-center">Admin Dashboard</h1>
+    <div class="row mt-4">
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card text-white bg-primary">
+                <div class="card-body">
+                    <h5 class="card-title">Total Users</h5>
+                    <p class="card-text">You have @Model.TotalUsers users registered.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card text-white bg-success">
+                <div class="card-body">
+                    <h5 class="card-title">Cars Rented Today</h5>
+                    <p class="card-text">@Model.CarsRentedToday cars were rented today.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card text-white bg-warning">
+                <div class="card-body">
+                    <h5 class="card-title">Pending Reports</h5>
+                    <p class="card-text">@Model.PendingReports reports need attention.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card text-white bg-info">
+                <div class="card-body">
+                    <h5 class="card-title">Total Income</h5>
+                    <p class="card-text">@Model.TotalIncome earned from car rents.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mt-5">
+        <a asp-controller="Admin" asp-action="ManageUsers" class="btn btn-outline-light btn-lg me-3">Manage Users</a>
+        <a asp-controller="Admin" asp-action="ManageIncomes" class="btn btn-outline-light btn-lg me-3">Manage Incomes</a>
+@*         <a asp-controller="Admin" asp-action="Reports" class="btn btn-outline-light btn-lg">View Reports</a>*@    
+    </div>
+</div>

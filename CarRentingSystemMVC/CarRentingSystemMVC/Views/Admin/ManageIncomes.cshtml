@@ -1,0 +1,50 @@
+﻿@model CarRentingSystemMVC.Models.Admin.ManageIncomesViewModel
+
+@{
+    ViewData["Title"] = "Manage Incomes";
+}
+
+<body>
+    <div class="container">
+        <h2 class="text-white">@ViewData["Title"]</h2>
+
+        <div class="total-income-summary text-white">
+            <h3>Total Income</h3>
+            <p>The total income from all rentals is:</p>
+            <h4>@Model.TotalIncome.ToString("C0", new System.Globalization.CultureInfo("vi-VN"))</h4>
+
+        </div>
+
+        <hr class="text-white" />
+
+        <div class="rental-transactions">
+            <h3 class="text-white">Rental Transactions</h3>
+
+            <table class="table text-white">
+                <thead>
+                    <tr>
+                        <th>Rental ID</th>
+                        <th>Car Brand</th>
+                        <th>Car Model</th>
+                        <th>Days</th>
+                        <th>Total Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var rental in Model.Rentals)
+                    {
+                        <tr>
+                            <td>@rental.Id</td>
+                            <td>@rental.CarBrand</td>
+                            <td>@rental.CarModel</td>
+                            <td>@rental.Days</td>
+                            <td>@rental.TotalPrice.ToString("C0", new System.Globalization.CultureInfo("vi-VN"))</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+
