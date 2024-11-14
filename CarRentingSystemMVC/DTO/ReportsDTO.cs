@@ -11,7 +11,7 @@ namespace DTO
     {
         [Key]
         public int Id { get; set; }
-        public int RentalHistoryId { get; set; }
+        public int? RentalHistoryId { get; set; }
         public string? FirstName { get; set; }
         public string? LastName { get; set; }
         public string? CarBrand { get; set; }
@@ -24,7 +24,7 @@ namespace DTO
         public string? CreditCardNumber { get; set; }
         public string? ExpirationDate { get; set; }
         public string? CreditCardCVV { get; set; }
-        public DateTime? DateReport { get; set; } = DateTime.Now;
-        public string Status { get; set; } = "Pending";
+        public DateTime? DateReport { get; set; }
+        public string? Status { get; set; }
     }
 }

@@ -26,7 +26,9 @@ namespace CarRentingAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<ReportsDTO>>> GetReports()
         {
-            return Ok(await _reportRepository.GetReportsAsync());
+            var reports = await _reportRepository.GetReportsAsync();
+            return Ok(reports);
+
         }
 
         // GET: odata/Reports/{id}
