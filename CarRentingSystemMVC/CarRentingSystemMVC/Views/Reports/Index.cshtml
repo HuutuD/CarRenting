@@ -45,9 +45,15 @@
                     @if (User.Identity.Name == "Admin")
                     {
                         <td>
-
-                            <a asp-action="Approve" asp-route-id="@item.Id">Approve</a>
-
+                            <div class="action-buttons">
+                                <form method="post" asp-action="Approve" asp-route-id="@item.Id">
+                                    <button class="btn-approve" type="submit" name="action" value="Approve">Approve</button>
+                                </form>
+                                <span> | </span>
+                                <form method="post" asp-action="Approve" asp-route-id="@item.Id">
+                                    <button class="btn-reject" type="submit" name="action" value="Reject">Reject</button>
+                                </form>
+                            </div>
                         </td>
                     }
                 </tr>
@@ -63,5 +69,26 @@
 
     a {
         text-decoration: none;
+    }
+    .btn-approve{
+        background-color: #198754;
+        color:#fff;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .btn-reject {
+        background-color: #dc3545;
+        color: #fff;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .action-buttons {
+        display: flex;
+        justify-content: space-between; 
+        width: 150px; 
     }
 </style>

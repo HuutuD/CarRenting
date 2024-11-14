@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CarRentingSystemMVC")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7f89027e030c9007cfd08cadc62f4f3cc3037959")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8fb878628da9c505d5abd2097225b68b1215b4c0")]
 [assembly: System.Reflection.AssemblyProductAttribute("CarRentingSystemMVC")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CarRentingSystemMVC")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
