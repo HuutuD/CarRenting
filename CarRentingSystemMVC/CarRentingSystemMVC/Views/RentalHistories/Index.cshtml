@@ -5,7 +5,6 @@
 }
 
 <h2>@ViewData["Title"]</h2>
-
 <body>
     @if (ViewData["Message"] != null)
     {
@@ -37,7 +36,7 @@
                         <td>@item.CarBrand</td>
                         <td>@item.CarModel</td>
                         <td>@item.Days</td>
-                        <td>@item.TotalPrice</td>
+                        <td>@(item.TotalPrice.HasValue ? item.TotalPrice.Value.ToString("C0") : "N/A")</td>
                         <td>@item.Address</td>
                         <td>@item.UserName</td>
                         <td>

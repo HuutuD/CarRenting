@@ -4,6 +4,7 @@ using CarRentingSystemMVC.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CarRentingSystemMVC.Migrations
 {
     [DbContext(typeof(CarsRentDbContext))]
-    partial class CarsRentDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241114112014_UpdatePriceType")]
+    partial class UpdatePriceType
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -52,10 +54,10 @@ namespace CarRentingSystemMVC.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<double>("Price")
+                    b.Property<decimal>("Price")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("float")
-                        .HasDefaultValue(200000.0);
+                        .HasColumnType("decimal(18,2)")
+                        .HasDefaultValue(200000m);
 
                     b.Property<string>("UserId")
                         .IsRequired()
@@ -78,8 +80,8 @@ namespace CarRentingSystemMVC.Migrations
                             Description = "The best SUV in the entire world! Rent Now!",
                             ImageUrl = "https://drive.gianhangvn.com/image/toyota-camry-hv-zing-1-2385312j22961.jpg",
                             Model = "Camry",
-                            Price = 300000.0,
-                            UserId = "a2443445-9cf2-461d-8182-f485e6dc83da"
+                            Price = 300000m,
+                            UserId = "15a99fb1-b119-4111-8737-a8570e221143"
                         },
                         new
                         {
@@ -89,8 +91,8 @@ namespace CarRentingSystemMVC.Migrations
                             Description = "Honda Civic Type R the new generation vehicle! Rent Now!",
                             ImageUrl = "https://dsportmag.com/wp-content/uploads/2016/09/WEB-HondaCivicTypeR-000a.jpg",
                             Model = "Civic",
-                            Price = 500000.0,
-                            UserId = "a2443445-9cf2-461d-8182-f485e6dc83da"
+                            Price = 500000m,
+                            UserId = "15a99fb1-b119-4111-8737-a8570e221143"
                         });
                 });
 
@@ -184,8 +186,8 @@ namespace CarRentingSystemMVC.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<double>("TotalPrice")
-                        .HasColumnType("float");
+                    b.Property<decimal>("TotalPrice")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("UserId")
                         .IsRequired()
@@ -233,8 +235,8 @@ namespace CarRentingSystemMVC.Migrations
                     b.Property<string>("LastName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<double?>("TotalPrice")
-                        .HasColumnType("float");
+                    b.Property<decimal?>("TotalPrice")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("UserName")
                         .HasColumnType("nvarchar(max)");
@@ -390,17 +392,17 @@ namespace CarRentingSystemMVC.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "a2443445-9cf2-461d-8182-f485e6dc83da",
+                            Id = "15a99fb1-b119-4111-8737-a8570e221143",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "32aa42d7-eeed-4575-a937-9d9a0cec83e3",
+                            ConcurrencyStamp = "2aa60b53-0b29-4030-95b1-bda0f7399aaa",
                             Email = "user@abv.bg",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "USER@ABV.BG",
                             NormalizedUserName = "USER",
-                            PasswordHash = "AQAAAAEAACcQAAAAENfy05w0zL/vcPjHNuXMKwDQzFiS7PWWgY0gaeuDzsi/A9GoIkmp4+jx1G2xXWaOOg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEAtCPZ0kx52d7SqDTQIYTQetdx/RhLajB3UGktNShnynfodECICyqb4OXlp8081zSg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "236abae6-5b54-4d54-948a-32067882e6d6",
+                            SecurityStamp = "72c41090-1ac0-4559-9303-149656440f2f",
                             TwoFactorEnabled = false,
                             UserName = "user"
                         });
