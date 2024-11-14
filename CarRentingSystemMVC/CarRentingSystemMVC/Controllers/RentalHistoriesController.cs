@@ -24,15 +24,27 @@ namespace CarRentingSystemMVC.Controllers
         [HttpGet]
         public async Task<IActionResult> Index()
         {
+            // Lấy danh sách các lịch sử thuê
             var rentalHistories = await _rentalHistoryDTOService.GetAllAsync(RentalHistoriesAPIUrl);
+
             if (rentalHistories == null || !rentalHistories.Any())
             {
                 ViewData["Message"] = "No rental history data available.";
                 return View();
-                Console.WriteLine($"Rental histories fetched: {rentalHistories.Count()} records.");
             }
-            
-            return View(rentalHistories);
+
+           
+            var currentUserName = User.Identity.Name; 
+            var filteredHistories = rentalHistories
+                .Where(r => r.UserName == currentUserName)
+                .ToList();
+
+            if (!filteredHistories.Any())
+            {
+                ViewData["Message"] = "No rental history found for the current user.";
+            }
+
+            return View(filteredHistories); // Trả về dữ liệu đã lọc
         }
     }
 }

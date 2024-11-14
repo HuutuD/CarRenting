@@ -5,54 +5,41 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Create</h1>
-
-<h4>Reports</h4>
+<h1>View Reports</h1>
 <hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create" method="post">
-            <div class="form-group">
-                <label for="RentalHistoryId">Rental History</label>
-                <input type="text" id="RentalHistoryId" class="form-control" value="@Model.RentalHistoryId" readonly />
-            </div>
+<body>
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <!-- RentalHistoryId: Được truyền vào từ URL -->
+                <div class="form-group">
+                    <label asp-for="RentalHistoryId" class="control-label"></label>
+                    <input asp-for="RentalHistoryId" class="form-control" readonly />
+                    <span asp-validation-for="RentalHistoryId" class="text-danger"></span>
+                </div>
 
-            <!-- Hiển thị thông tin từ RentalHistory -->
-            <div class="form-group">
-                <label for="CarBrand">Car Brand</label>
-                <input type="text" id="CarBrand" class="form-control" value="@Model.RentalHistory?.CarBrand" readonly />
-            </div>
-
-            <div class="form-group">
-                <label for="CarModel">Car Model</label>
-                <input type="text" id="CarModel" class="form-control" value="@Model.RentalHistory?.CarModel" readonly />
-            </div>
-
-            <div class="form-group">
-                <label for="TotalPrice">Total Price</label>
-                <input type="text" id="TotalPrice" class="form-control" value="@Model.RentalHistory?.TotalPrice" readonly />
-            </div>
-
-            <div class="form-group">
-                <label for="Days">Days</label>
-                <input type="text" id="Days" class="form-control" value="@Model.RentalHistory?.Days" readonly />
-            </div>
-            <div class="form-group">
-                <label for="Description">Description</label>
-                <input type="text" id="Days" class="form-control" value="@Model.Description" readonly />
-            </div>
-            <button type="submit" class="btn btn-primary">Create Report</button>
-        </form>
-
+                <div class="form-group">
+                    <label asp-for="Description" class="control-label"></label>
+                    <input asp-for="Description" class="form-control" />
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
     </div>
-</div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
-@section Scripts {
-    @{
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    @section Scripts {
+        @{
+            await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        }
     }
-}
+</body>
+<style>
+    body {
+        background-color: #fff;
+        background-image: none !important;
+    }
+</style>

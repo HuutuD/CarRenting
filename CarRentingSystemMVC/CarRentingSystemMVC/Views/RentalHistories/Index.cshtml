@@ -6,44 +6,55 @@
 
 <h2>@ViewData["Title"]</h2>
 
-@if (ViewData["Message"] != null)
-{
-    <div class="alert alert-info">
-        @ViewData["Message"]
-    </div>
-}
-else
-{
-    <table class="table">
-        <thead>
-            <tr>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Car Brand</th>
-                <th>Car Model</th>
-                <th>Days</th>
-                <th>Total Price</th>
-                <th>Address</th>
-                <th>UserName</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model)
-            {
+<body>
+    @if (ViewData["Message"] != null)
+    {
+        <div class="alert alert-info">
+            @ViewData["Message"]
+        </div>
+    }
+    else
+    {
+        <table class="table">
+            <thead>
                 <tr>
-                    <td>@item.FirstName</td>
-                    <td>@item.LastName</td>
-                    <td>@item.CarBrand</td>
-                    <td>@item.CarModel</td>
-                    <td>@item.Days</td>
-                    <td>@item.TotalPrice</td>
-                    <td>@item.Address</td>
-                    <td>@item.UserName</td>
-                    <td>
-                        <a asp-controller="Reports" asp-action="Create" asp-route-rentalHistoryId="@item.Id">Create Report</a>
-                    </td>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Car Brand</th>
+                    <th>Car Model</th>
+                    <th>Days</th>
+                    <th>Total Price</th>
+                    <th>Address</th>
+                    <th>UserName</th>
                 </tr>
-            }
-        </tbody>
-    </table>
-}
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.FirstName</td>
+                        <td>@item.LastName</td>
+                        <td>@item.CarBrand</td>
+                        <td>@item.CarModel</td>
+                        <td>@item.Days</td>
+                        <td>@item.TotalPrice</td>
+                        <td>@item.Address</td>
+                        <td>@item.UserName</td>
+                        <td>
+                            <a asp-controller="Reports" asp-action="Create" asp-route-rentalHistoryId="@item.Id">Reports</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+</body>
+<style>
+    body {
+        background-color: #fff;
+        background-image: none !important;
+    }
+    a{
+        text-decoration: none;
+    }
+</style>

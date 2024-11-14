@@ -1,48 +1,67 @@
-﻿@* @model IEnumerable<CarRentingSystemMVC.Data.Models.Reports> *@
-    @model IEnumerable<DTO.ReportsDTO>
+﻿@model IEnumerable<DTO.ReportsDTO>
+
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
+<h1>Reports</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.RentalHistoryId)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DateReport)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Status)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
+<body>
+    <table class="table">
+        <thead>
+            <tr>
+                @* <th> @Html.DisplayNameFor(model => model.RentalHistoryId)   </th> *@
+                <th> @Html.DisplayNameFor(model => model.UserName)          </th>
+                <th> @Html.DisplayNameFor(model => model.CarBrand)          </th>
+                <th> @Html.DisplayNameFor(model => model.CarModel)          </th>
+                <th> @Html.DisplayNameFor(model => model.Days)              </th>
+                <th> @Html.DisplayNameFor(model => model.TotalPrice)        </th>
+                <th> @Html.DisplayNameFor(model => model.Address)           </th>
+                <th> @Html.DisplayNameFor(model => model.ExpirationDate)    </th>
+                <th> @Html.DisplayNameFor(model => model.DateReport)        </th>
+                <th> @Html.DisplayNameFor(model => model.Status)            </th>
+                <th> @Html.DisplayNameFor(model => model.Description)       </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    @* <td>
                 @Html.DisplayFor(modelItem => item.RentalHistoryId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DateReport)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Status)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+                </td> *@
+                    <td>@item.UserName</td>
+                    <td>@item.CarBrand</td>
+                    <td>@item.CarModel</td>
+                    <td>@item.Days</td>
+                    <td>@item.TotalPrice</td>
+                    <td>@item.Address</td>
+                    <td>@item.ExpirationDate</td>
+                    <td>@item.DateReport</td>
+                    <td>@item.Status</td>
+                    <td>@item.Description</td>
+                    @if (User.Identity.Name == "Admin")
+                    {
+                        <td>
+
+                            <a asp-action="Approve" asp-route-id="@item.Id">Approve</a>
+
+                        </td>
+                    }
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+<style>
+    body {
+        background-color: #fff;
+        background-image: none !important;
+    }
+
+    a {
+        text-decoration: none;
+    }
+</style>
