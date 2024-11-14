@@ -48,17 +48,20 @@
                                     <li><a asp-controller="Admin" asp-action="ManageUsers" class="dropdown-item">Manage Users</a></li>
                                 </ul>
                             </li>
+                            @* <li class="nav-item">
+                                <a class="nav-link text-white" asp-controller="RentalHistories" asp-action="Index" class="dropdown-item">View Rental History</a>
+                            </li> *@
                             <li class="nav-item">
-                                <a class="nav-link text-white" asp-controller="Rents" asp-action="Reports" class="dropdown-item">View Reports</a>
+                                <a class="nav-link text-white" asp-controller="Reports" asp-action="Index" class="dropdown-item">View Reports</a>
                             </li>
                         }
                         else
                         {
                             <li class="nav-item">
-                                <a class="nav-link text-white" asp-controller="Rents" asp-action="RentalHistory" class="dropdown-item">View Rental History</a>
+                                <a class="nav-link text-white" asp-controller="RentalHistories" asp-action="Index" class="dropdown-item">View Rental History</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-white" asp-controller="Rents" asp-action="Reports" class="dropdown-item">View Reports</a>
+                                <a class="nav-link text-white" asp-controller="Reports" asp-action="Index" class="dropdown-item">View Reports</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-white" asp-area="" asp-controller="Contact" asp-action="ContactUs">Contact Us</a>

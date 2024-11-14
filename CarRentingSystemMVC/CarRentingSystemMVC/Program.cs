@@ -1,4 +1,6 @@
+using CarRentingSystemMVC.APIs;
 using CarRentingSystemMVC.Data;
+using CarRentingSystemMVC.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -10,14 +12,23 @@ namespace CarRentingSystemMVC
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
-            var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
+            // Add services to the container.            
+
             builder.Services.AddDbContext<CarsRentDbContext>(options =>
-                options.UseSqlServer(connectionString));
+               options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
             builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+
+            // Add services to the container.
+            builder.Services.AddHttpClient();
+
+            // Register the ApiService
+            builder.Services.AddScoped(typeof(ApiService<>));
+            builder.Services.Configure<ApiUrls>(builder.Configuration.GetSection("ApiUrls"));
 
             builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<CarsRentDbContext>();
+            builder.Services.AddDistributedMemoryCache();
             builder.Services.AddControllersWithViews();
 
             builder.Services.Configure<IdentityOptions>(options =>

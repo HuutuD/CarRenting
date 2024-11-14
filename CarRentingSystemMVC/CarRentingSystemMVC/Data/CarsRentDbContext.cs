@@ -10,6 +10,7 @@ namespace CarRentingSystemMVC.Data
 {
     public class CarsRentDbContext : IdentityDbContext
     {
+        public CarsRentDbContext() { }
         public CarsRentDbContext(DbContextOptions<CarsRentDbContext> options)
             : base(options)
         {
@@ -20,6 +21,20 @@ namespace CarRentingSystemMVC.Data
         public DbSet<Car> Cars { get; set; }
         public DbSet<Rent> Rents { get; set; }
         public DbSet<Reports> Reports { get; set; }
+        public DbSet<RentalHistory> RentalHistories { get; set; }
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+                IConfigurationRoot configuration = new ConfigurationBuilder()
+                    .SetBasePath(Directory.GetCurrentDirectory())
+                    .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+                    .Build();
+
+                optionsBuilder.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
+                optionsBuilder.EnableSensitiveDataLogging();
+            }
+        }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.Entity<IdentityUser>()
@@ -34,12 +49,6 @@ namespace CarRentingSystemMVC.Data
             builder.Entity<Car>()
                 .Property(c => c.Price)
                 .HasDefaultValue(DataConstants.PriceDefault);
-
-            builder.Entity<Reports>()
-               .HasOne(r => r.RentalHistory)
-               .WithMany()
-               .HasForeignKey(r => r.RentalHistoryId)
-               .OnDelete(DeleteBehavior.Cascade);
 
             base.OnModelCreating(builder);
         }
