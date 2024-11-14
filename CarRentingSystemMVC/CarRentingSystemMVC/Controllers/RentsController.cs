@@ -45,6 +45,11 @@ namespace CarRentingSystemMVC.Controllers
             ModelState.Remove("CarModel");
             ModelState.Remove("CarBrand");
             ModelState.Remove("PricePerDay");
+            if (rentFormModel.TotalPrice < 0)
+            {
+                ModelState.AddModelError(string.Empty, "Total price cannot be negative.");
+                return View(rentFormModel);
+            }
             if (!ModelState.IsValid)
             {
                 return View(rentFormModel);

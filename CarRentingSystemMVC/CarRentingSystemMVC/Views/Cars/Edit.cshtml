@@ -41,7 +41,7 @@
                 </div>
                 <div class="form-group mb-3">
                     <label asp-for="Price" for="price" class="text-white">Price Per Day:</label>
-                    <input asp-for="Price" type="number" class="form-control" id="price" placeholder="260.00">
+                    <input asp-for="Price" type="number" class="form-control" id="price" placeholder="260">
                     <span asp-validation-for="Price" class="text-danger"></span>
                 </div>
                 <div class="d-grid">
@@ -71,11 +71,24 @@
 @section CustomScripts {
     <script>
         let priceInputField = document.getElementById('price');
-        priceInputField.value = (Number(priceInputField.value)).toFixed(2);
+
+        // Đảm bảo rằng giá trị ban đầu là số nguyên (int)
+        if (!isNaN(priceInputField.value.replace(',', '')) && priceInputField.value.trim() !== "") {
+            priceInputField.value = Math.floor(Number(priceInputField.value.replace(',', '')));  // Lấy số nguyên
+        }
+
+        // Lắng nghe sự kiện input và xử lý chỉ nhận số nguyên
         priceInputField.addEventListener('input', () => {
-            priceInputField.value = Number(priceInputField.value).toFixed(2);
-            console.log(priceInputField.value);
-            console.log(typeof priceInputField.value);
+            let priceValue = priceInputField.value.replace(',', '');  // Loại bỏ dấu phẩy trước khi xử lý
+
+            // Kiểm tra nếu là một số hợp lệ và lấy phần nguyên
+            if (!isNaN(priceValue)) {
+                priceInputField.value = Math.floor(Number(priceValue));  // Chỉ lấy số nguyên
+            } else {
+                priceInputField.value = ''; 
+            }
         });
+
+
     </script>
 }

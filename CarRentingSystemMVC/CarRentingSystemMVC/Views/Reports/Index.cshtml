@@ -36,7 +36,7 @@
                     <td>@item.CarBrand</td>
                     <td>@item.CarModel</td>
                     <td>@item.Days</td>
-                    <td>@item.TotalPrice</td>
+                    <td>@(item.TotalPrice.HasValue ? item.TotalPrice.Value.ToString("C0") : "N/A")</td>
                     <td>@item.Address</td>
                     <td>@item.ExpirationDate</td>
                     <td>@item.DateReport</td>
@@ -60,7 +60,9 @@
             }
         </tbody>
     </table>
+
 </body>
+
 <style>
     body {
         background-color: #fff;

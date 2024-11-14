@@ -69,7 +69,7 @@ namespace CarRentingSystemMVC.Seeding
                 Model = "Camry",
                 ImageUrl = "https://drive.gianhangvn.com/image/toyota-camry-hv-zing-1-2385312j22961.jpg",
                 Description = "The best SUV in the entire world! Rent Now!",
-                Price = 300.000,
+                Price = 300000,
                 CategoryId = 2,
                 UserId = userGeneratedId
             };
@@ -81,7 +81,7 @@ namespace CarRentingSystemMVC.Seeding
                 Model = "Civic",
                 ImageUrl = "https://dsportmag.com/wp-content/uploads/2016/09/WEB-HondaCivicTypeR-000a.jpg",
                 Description = "Honda Civic Type R the new generation vehicle! Rent Now!",
-                Price = 500.000,
+                Price = 500000,
                 CategoryId = 5,
                 UserId = userGeneratedId
             };
