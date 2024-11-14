@@ -118,33 +118,61 @@ namespace CarRentingSystemMVC.Controllers
         }
 
 
-        // POST: Reports/Approve (dành cho Admin để xác nhận Reports)
+        // POST: Reports/Approve (for Admin to approve Reports)
         [HttpPost]
-        [Authorize(Roles = "Admin")] 
-        public async Task<IActionResult> Approve(int id)
+        public async Task<IActionResult> Approve(int id, string action)
         {
-            Reports reports = await _reportService.GetByIdAsync(ReportsAPIUrl, id);
-            if (reports != null)
+            try
             {
-                var userIdString = HttpContext.Session.GetString("UserId");
-                if (string.IsNullOrEmpty(userIdString))
-                {
-                    ModelState.AddModelError("", "Không tìm thấy UserId trong phiên làm việc. Vui lòng đăng nhập lại.");
-                    return RedirectToAction("Index", "Logins");
-                }
+                // Get the report by ID
+                Reports report = await _reportService.GetByIdAsync(ReportsAPIUrl, id);
 
-                // Cập nhật đơn hàng trong API
-                bool isApproved = await _reportService.UpdateAsync(ReportsAPIUrl, reports, id);
-
-                if (isApproved)
+                if (report == null)
                 {
-                    // Sau khi duyệt thành công, chuyển về trang danh sách reports
+                    ModelState.AddModelError("", "Báo cáo không tồn tại.");
                     return RedirectToAction("Index");
                 }
-                ModelState.AddModelError("", "Có lỗi khi xác nhận reports. Vui lòng thử lại.");
+
+                // Update the status based on the action (Approve/Reject)
+                if (action == "Approve")
+                {
+                    report.Status = "Approved";
+                }
+                else if (action == "Reject")
+                {
+                    report.Status = "Rejected";
+                }
+                else
+                {
+                    // If action is invalid, show an error
+                    ModelState.AddModelError("", "Hành động không hợp lệ.");
+                    return RedirectToAction("Index");
+                }
+
+                // Update the report status using the UpdateAsync method
+                bool isUpdated = await _reportService.UpdateAsync(ReportsAPIUrl, report, id);
+
+                if (isUpdated)
+                {
+                    // Redirect to the Reports index page if update is successful
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    // If the update failed, show an error message
+                    ModelState.AddModelError("", "Không thể cập nhật báo cáo. Vui lòng thử lại.");
+                    return RedirectToAction("Index");
+                }
             }
-            return RedirectToAction("Index");
+            catch (Exception ex)
+            {
+                // Log the error and show an error message
+                ModelState.AddModelError("", $"Có lỗi khi xử lý yêu cầu: {ex.Message}");
+                Console.WriteLine($"Error: {ex.Message}");
+                return RedirectToAction("Index");
+            }
         }
+
 
     }
 }
