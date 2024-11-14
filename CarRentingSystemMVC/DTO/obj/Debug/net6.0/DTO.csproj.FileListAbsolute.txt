@@ -1,0 +1,12 @@
+E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\DTO\bin\Debug\net6.0\DTO.deps.json
+E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\DTO\bin\Debug\net6.0\DTO.dll
+E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\DTO\bin\Debug\net6.0\DTO.pdb
+E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\DTO\obj\Debug\net6.0\DTO.GeneratedMSBuildEditorConfig.editorconfig
+E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\DTO\obj\Debug\net6.0\DTO.AssemblyInfoInputs.cache
+E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\DTO\obj\Debug\net6.0\DTO.AssemblyInfo.cs
+E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\DTO\obj\Debug\net6.0\DTO.csproj.CoreCompileInputs.cache
+E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\DTO\obj\Debug\net6.0\DTO.sourcelink.json
+E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\DTO\obj\Debug\net6.0\DTO.dll
+E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\DTO\obj\Debug\net6.0\refint\DTO.dll
+E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\DTO\obj\Debug\net6.0\DTO.pdb
+E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\DTO\obj\Debug\net6.0\ref\DTO.dll

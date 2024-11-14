@@ -19,8 +19,6 @@ E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\bi
 E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.UI.dll
 E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\bin\Debug\net6.0\Microsoft.AspNetCore.Razor.Language.dll
 E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
-E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\bin\Debug\net6.0\Microsoft.Build.dll
-E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\bin\Debug\net6.0\Microsoft.Build.Framework.dll
 E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\bin\Debug\net6.0\Microsoft.CodeAnalysis.AnalyzerUtilities.dll
 E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\bin\Debug\net6.0\Microsoft.CodeAnalysis.dll
 E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\bin\Debug\net6.0\Microsoft.CodeAnalysis.CSharp.dll
@@ -52,7 +50,6 @@ E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\bi
 E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
 E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
-E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\bin\Debug\net6.0\Microsoft.NET.StringTools.dll
 E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\bin\Debug\net6.0\Microsoft.VisualStudio.Debugger.Contracts.dll
 E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\bin\Debug\net6.0\Microsoft.VisualStudio.Web.CodeGeneration.dll
 E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\bin\Debug\net6.0\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
@@ -85,7 +82,6 @@ E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\bi
 E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
 E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\bin\Debug\net6.0\System.Drawing.Common.dll
 E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
-E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\bin\Debug\net6.0\System.Reflection.MetadataLoadContext.dll
 E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\bin\Debug\net6.0\System.Runtime.Caching.dll
 E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
 E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\bin\Debug\net6.0\System.Security.Permissions.dll
@@ -235,7 +231,6 @@ E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\bi
 E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
 E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
 E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\bin\Debug\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
 E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\bin\Debug\net6.0\runtimes\alpine-arm\native\libe_sqlite3.so
 E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\bin\Debug\net6.0\runtimes\alpine-arm64\native\libe_sqlite3.so
 E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\bin\Debug\net6.0\runtimes\alpine-x64\native\libe_sqlite3.so
@@ -258,11 +253,7 @@ E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\bi
 E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\bin\Debug\net6.0\runtimes\win-arm64\native\e_sqlite3.dll
 E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\bin\Debug\net6.0\runtimes\win-x64\native\e_sqlite3.dll
 E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\bin\Debug\net6.0\runtimes\win-x86\native\e_sqlite3.dll
-E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\bin\Debug\net6.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
-E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
-E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
-E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\obj\Debug\net6.0\CarRentingSystemMVC.csproj.AssemblyReference.cache
 E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\obj\Debug\net6.0\CarRentingSystemMVC.Properties.Resources.resources
 E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\obj\Debug\net6.0\CarRentingSystemMVC.csproj.GenerateResource.cache
@@ -290,3 +281,16 @@ E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\ob
 E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\obj\Debug\net6.0\CarRentingSystemMVC.pdb
 E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\obj\Debug\net6.0\CarRentingSystemMVC.genruntimeconfig.cache
 E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\obj\Debug\net6.0\ref\CarRentingSystemMVC.dll
+E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\bin\Debug\net6.0\System.Formats.Asn1.dll
+E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\bin\Debug\net6.0\System.Security.Cryptography.Pkcs.dll
+E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\bin\Debug\net6.0\System.Text.Json.dll
+E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
+E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\obj\Debug\net6.0\CarRentingSystemMVC.sourcelink.json
+E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\bin\Debug\net6.0\DTO.dll
+E:\Prn231_Project\CarRentingSystemMVC\CarRentingSystemMVC\CarRentingSystemMVC\bin\Debug\net6.0\DTO.pdb

@@ -83,36 +83,28 @@ namespace CarRentingSystemMVC.Controllers
             this._data.Cars.Remove(car);
 
             this._data.Rents.Add(rent);
+
+             RentalHistory rentalHistory = new RentalHistory
+            {
+                FirstName = rentFormModel.FirstName,
+                LastName = rentFormModel.LastName,
+                CarBrand = rentFormModel.CarBrand,
+                CarModel = rentFormModel.CarModel,
+                Days = rentFormModel.Days,
+                TotalPrice = rentFormModel.TotalPrice,
+                UserName = User.Identity.Name,
+                Address = rentFormModel.Address,
+                CreditCardNumber = rentFormModel.CreditCardNumber,
+                ExpirationDate = rentFormModel.ExpirationDate.ToString("MM/yyyy"),
+                CreditCardCVV = rentFormModel.CreditCardCVV
+            };
+
+            this._data.RentalHistories.Add(rentalHistory);
             this._data.SaveChanges();
 
             return View("ThankYou");
         }
 
-        public IActionResult RentalHistory()
-        {
-            //Xác nhận người dùng hiện tại
-            string currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
-            var rentals = _data.Rents
-                .Where(r => r.UserId == currentUserId)
-                .Select(r => new RentalHistory
-                {
-                    Id = r.Id,
-                    FirstName = r.FirstName,
-                    LastName = r.LastName,
-                    CarBrand = r.CarBrand,
-                    CarModel = r.CarModel,
-                    Days = r.Days,
-                    TotalPrice = r.TotalPrice,
-                    UserName = r.UserId,
-                    Address = r.Address,
-                    CreditCardNumber = r.CreditCardNumber,
-                    ExpirationDate = r.ExpirationDate,
-                    CreditCardCVV = r.CreditCardCVV
-                })
-                .ToList();
-
-            return View(rentals);
-        }
     }
 }

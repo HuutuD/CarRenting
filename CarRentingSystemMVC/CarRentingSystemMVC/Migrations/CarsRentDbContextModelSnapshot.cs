@@ -17,7 +17,7 @@ namespace CarRentingSystemMVC.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.21")
+                .HasAnnotation("ProductVersion", "6.0.35")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
@@ -79,7 +79,7 @@ namespace CarRentingSystemMVC.Migrations
                             ImageUrl = "https://drive.gianhangvn.com/image/toyota-camry-hv-zing-1-2385312j22961.jpg",
                             Model = "Camry",
                             Price = 300.0,
-                            UserId = "c527addb-dfe4-481d-8cc6-753effaf047f"
+                            UserId = "48dc2b30-d99c-4bc9-9fbd-7df8890e4175"
                         },
                         new
                         {
@@ -90,7 +90,7 @@ namespace CarRentingSystemMVC.Migrations
                             ImageUrl = "https://dsportmag.com/wp-content/uploads/2016/09/WEB-HondaCivicTypeR-000a.jpg",
                             Model = "Civic",
                             Price = 500.0,
-                            UserId = "c527addb-dfe4-481d-8cc6-753effaf047f"
+                            UserId = "48dc2b30-d99c-4bc9-9fbd-7df8890e4175"
                         });
                 });
 
@@ -241,7 +241,7 @@ namespace CarRentingSystemMVC.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("RentalHistory");
+                    b.ToTable("RentalHistories");
                 });
 
             modelBuilder.Entity("CarRentingSystemMVC.Data.Models.Reports", b =>
@@ -393,17 +393,17 @@ namespace CarRentingSystemMVC.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "c527addb-dfe4-481d-8cc6-753effaf047f",
+                            Id = "48dc2b30-d99c-4bc9-9fbd-7df8890e4175",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "ceae2c8e-5631-42bc-b320-9ad4edf5c52c",
+                            ConcurrencyStamp = "26382dab-a0e5-47f1-9129-9fc1a0c5629d",
                             Email = "user@abv.bg",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "USER@ABV.BG",
                             NormalizedUserName = "USER",
-                            PasswordHash = "AQAAAAEAACcQAAAAEA/ahLeqfepCCoR7nVdqpN3m2GvWbX17HRxZblkhJ8vKmzTO87tGMD1CtwKDAh0xkg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEL+ws46N5gb8j8N9Y8Dw8L1QY0cY6VXNoQALhE+MTn32I9NIzX+MzUmeMbnA5gvBNg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "d9e47152-3c11-4c28-9c71-e5aae4955893",
+                            SecurityStamp = "80cb1969-fdd2-40fd-9eaa-85964bd8d1c7",
                             TwoFactorEnabled = false,
                             UserName = "user"
                         });
